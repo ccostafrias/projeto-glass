@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Google Glass</title>
+    <link rel="stylesheet" type="text/css" href="_css/estilo.css">
+    <link rel="stylesheet" type="text/css" href="_css/form.css">
+    <script language="javascript" src="_javascript/funcoes.js"></script>
+    <script>
+        function calc_total() {
+            var qtd = parseInt(document.getElementById('cQnt').value);
+            tot = qtd * 1500;
+            document.getElementById('cDin').value = tot;
+        }
+    </script>
+</head>
+
+<body>
+<div id="interface">
+    <header id="cabecalho">
+    <hgroup>
+        <h1>Google Glass</h1>
+        <h2>A revolução do Google está chegando</h2>
+    </hgroup>
+
+    <img id="icone" src="_imagens/contato.png" alt="oclinhos">
+ 
+<nav id="menu">
+    <h1>Menu Principal</h1>
+    <ul type="square" start="1">
+        <li onmouseover="mudaFoto('_imagens/home.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a href="index.html">Home</a></li>
+        <li onmouseover="mudaFoto('_imagens/especificacoes.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a href="specs.html">Especificações</a></li>
+        <li onmouseover="mudaFoto('_imagens/fotos.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a href="fotos.html">Fotos</a></li>
+        <li onmouseover="mudaFoto('_imagens/multimidia.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a href="multimidia.html">Multimídia</a></li>
+        <li onmouseover="mudaFoto('_imagens/contato.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a href="fale-conosco.html">Fale conosco</a></li>
+    </ul>
+</nav>
+</header>
+<section id="corpo-full">
+    <article id="principal">
+        <header id="artigo">
+            <hgroup>
+                <h3>Fale Conosco > Contato</h3>
+                <h1>Formulário de Contato</h1>
+                <h2>por Caicosa</h2>
+                <h3 class="dir">Atualizado em 23/Março/2021</h3>
+            </hgroup>
+        </header>
+        <!--Formulários-->
+        <form method="post" id="fContato" action="mailto:contato@meupauetaopequenininho.com" oninput="calc_total();">
+            <fieldset id="usuario"><legend>Identificação do Usuário</legend>
+                <p><label for="cNome">Nome: </label><input type="text" name="tNome" id="cNome" maxlength="30" size="20" placeholder="Nome Completo"></p>
+                <p><label for="cSenha">Senha: </label><input type="password" name="tSenha" id="cSenha" size="8" maxlength="8" placeholder="8 dígitos"></p>
+                <hr>
+                <p><label for="cMail">E-mail: </label><input type="email" name="tMail" id="cMail" maxlength="40" size="20" placeholder="Seu e-mail"></p>
+                <fieldset id="sexo"><legend>Sexo:</legend>
+                    <input type="radio" name="tSexo" id="cMasc"><label for="cMasc">Masculino</label>
+                    <br>
+                    <input type="radio" name="tSexo" id="cFem"><label for="cFem">Feminino</label>
+                </fieldset>
+                <p><label for="cData">Data de Nascimento: </label><input type="date" name="tData" id="cData"></p>
+            </fieldset>
+            <fieldset id="endereco"><legend>Endereço do Usuário</legend>
+                <p><label for="cLugar">Logradouro </label><input type="text" name="tLugar" id="cLugar" size="20" placeholder="Rua, Av, Trav...">
+                <label for="cNumero">Número </label><input type="number" name="tNumero" id="cNumero" size="10" min="0"></p>
+                <p><label for="cEstado">Estado: </label>
+                <select name="tEstado" id="cEstado">
+                    <optgroup label="Norte">
+                        <option value="AM">Amazonas</option>
+                        <option value="RR">Roraima</option>
+                        <option value="AP">Amapá</option>
+                        <option value="PA">Pará</option>
+                        <option value="TO">Tocantins</option>
+                        <option value="RO">Rondônia</option>
+                        <option value="AC">Acre</option>
+                    </optgroup>
+                    <optgroup label="Nordeste">
+                        <option value="MA">Maranhão</option>
+                        <option value="PI">Piauí</option>
+                        <option value="CE">Ceará</option>
+                        <option value="RN">Rio Grande do Norte</option>
+                        <option value="PE">Pernambuco</option>
+                        <option value="PB">Paraíba</option>
+                        <option value="SE">Sergipe</option>
+                        <option value="AL">Alagoas</option>
+                        <option value="BA">Bahia</option>
+                    </optgroup>
+                    <optgroup label="Centro-Oeste">
+                        <option value="GO">Goiás</option>
+                        <option value="MS">Mato Grosso do Sul</option>
+                        <option value="MT">Mato Grosso</option>
+                    <option value="DF">Distrito Federal</option>
+                    </optgroup>
+                    <optgroup label="Sudeste">
+                        <option value="SP">São Paulo</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="MG">Minas Gerais</option>
+                        <option value="ES">Espirito Santo</option>
+                    </optgroup>
+                    <optgroup label="Sul">
+                        <option value="PR">Paraná</option>
+                        <option value="RS">Rio Grande do Sul</option>
+                        <option value="SC">Santa Catarina</option>
+                    </optgroup>
+                </select></p>
+                <p><label for="cCidade">Cidade: </label><input type="text" name="tCidade" id="cCidade" size="30" placeholder="Sua cidade" list="cidades"></p>
+                <datalist id="cidades">
+                    <option value="Rio de Janeiro"></option>
+                    <option value="Nova Iguaçu"></option>
+                    <option value="Niterói"></option>
+                    <option value="Belford Roxo"></option>
+                </datalist>
+            </fieldset>
+            <fieldset id="mensagem"><legend>Mensagem do Usuário</legend>
+                <p><label for="cUrg">Grau de Urgência: </label>Mín<input type="range" name="tUrg" id="cUrg" min="0" max="10">Máx</p>
+                <p><label for="cText">Mensagem: </label>
+                    <br>
+                    <textarea name="tText" id="cText" cols="72" rows="5" placeholder="Deixe aqui sua mensagem"></textarea></p>
+            </fieldset>
+            <fieldset id="pedido"><legend>Quero um Google Glass</legend>
+                <p><input type="checkbox" name="tAdq" id="cAdq" checked><label for="cAdq"> Gostaria de adquirir um Google Glass quando disponível</label></p>
+                <p><label for="cCor">Cor: </label><input type="color" name="tCor" id="cCor" value="#FF0000"></p>
+                <p><label for="cQnt">Quantidade: </label><input type="number" size="8" name="tQnt" id="cQnt" min="0"></p>
+                <p><label for="cDin">Preço Total: R$ </label><input type="text" size="25" name="tDin" id="cDin" placeholder="Total a Pagar" readonly></p>
+            </fieldset>
+
+            <input type="submit" id="cEnviar" value="Enviar">
+        </form>
+<footer id="rodape">
+    <p>Copyright &copy; 2021 - by Caicosa BR<br>
+    <a href="https://www.youtube.com/watch?v=_FX6rml2Yjs&ab_channel=MrBeast" target="_blank">Facebook</a> | 
+    <a href="https://www.youtube.com/watch?v=BXLVYzqlj2E&ab_channel=Kwebbelkop" target="_blank">Twitter</a><p>
+    </footer>
+</div>
+</body>
+</html>
