@@ -2,29 +2,36 @@
 /*https://fonts.google.com/*/
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&family=Poppins:wght@500&display=swap');
 
-body{
-    /*
-    background-image: url("iron.jpeg");*/
+*, *::after, *::before {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
     background-color: #dddddd;
     color: black;
     font-family: 'Open Sans', sans-serif;
+    overflow-x: hidden;
     
 }
 /*valores da margem em sentido horário (cima, direita, baixo, esquerda)*/
 /*box shadow: desloc. hori., desloc. vertical, espalhamento */
-div#interface {
-    width: 90%;
+body {
+    width: 90vw;
+    max-width: 1200px;
     background-color: #ffffff;
     margin: -20px auto 0px auto;
     box-shadow: 0px 0px 10px rgba(0,0,0,.5);
-    padding: 10px;
-    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
 }
 
 p{
     text-align:justify;
-    text-indent: 50px;
-    /*color: hsla(48, 100%, 93%, 1);*/
+    text-indent: 25px;
+    hyphens: auto;
 }
 
 a {
@@ -36,10 +43,13 @@ a:hover {
     text-decoration: underline;
 }
 
+/* Header */
+
 header#cabecalho img#icone{
     position: absolute;
-    left: 81%;
-    top:70px;
+    right: 20px;
+    top: 70px;
+    transform: scale(.7);
 }
 
 header#cabecalho h1 {
@@ -62,8 +72,7 @@ header#cabecalho h2 {
 /* largura da borda, cor da borda, formato*/
 header#cabecalho {
     border-bottom: 1px #606060 dashed;
-    height: 140px;
-    background: url("../imagens/glass-logo-peq.jpg") no-repeat 0px 90px;
+    padding: 10px;
 }
 /* Imagens com legendas */
 
@@ -99,26 +108,32 @@ figure.foto-legenda:hover figcaption {
     opacity: 1;
 }
 
-/* Formatação do menu*/
+/* Nav */
 
 nav#menu {
     display: block;
+    font-size: .7rem;
 }
 
 nav#menu ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    padding: 0;
+
     list-style: none;
     text-transform: uppercase;
-    position: absolute;
-    top: -20px;
+    /* position: absolute;
     right: 7%;
-    
+    top: 0; */
 }
 
 nav#menu li{
-    display: inline-block;
     background-color: #dddddd;
     padding: 10px;
-    margin: 2px;
     transition: background-color 0.5s;
     box-shadow: 0px 0px 5px rgba(0,0,0,.5);
 }
@@ -138,17 +153,26 @@ nav#menu a{
 
 nav#menu a:hover{
     color: white;
-    text-decoration: underline;
 }
+
+main#main {
+    display: flex;
+    flex-direction: row;
+}
+
+/* Section */
 
 section#corpo {
     display: block;
-    width: 57%;
-    float: left;
     border-right: 1px #606060 dashed;
-    padding-right: 24px;
-    padding-left: 18px;
+}
 
+section#corpo-full {
+    width: 100%;
+}
+
+article#principal {
+    padding: 20px 15px;
 }
 
 article#principal h2{
@@ -177,6 +201,7 @@ header#artigo h2{
 header#artigo h3{
     font-size: 12pt;
     color: #606060;
+    margin-top: 0;
 }
 
 header#artigo h3.dir{
@@ -229,15 +254,15 @@ video#video-abertura {
     margin-bottom: 20px;
 }
 
+/* Aside */
+
 aside#lateral {
     display: block;
-    width: 36%;
-    float: right;
+    align-self: flex-start;
+    flex: 0 0 30%;
     background-color: #dddddd;
-    padding: 30px 10px 10px 10px;
-    margin-top: 25px;
-    margin-left: 5px;
-    margin-right: 4px;
+    margin: 20px 15px;
+    padding: 10px;
 }
 
 aside#lateral h1 {
@@ -259,6 +284,8 @@ video#video-recente{
     margin-top: -15px;
 }
 
+/* Footer */
+
 footer#rodape {
     clear: both;
     border-top: 1px #606060 dashed;
@@ -268,4 +295,14 @@ footer#rodape {
 footer#rodape p{
     text-align: center;
     text-indent: 0px;
+}
+
+@media (max-width: 768px) {
+    main#main {
+        flex-direction: column;
+    }
+
+    section#corpo {
+        border: none;
+    }
 }

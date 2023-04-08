@@ -1,76 +1,89 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Google Glass</title>
-    <link rel="stylesheet" type="text/css" href="css/estilo.css">
-    <link rel="stylesheet" type="text/css" href="css/specs.css">
+    <link rel="stylesheet" type="text/css" href="./css/estilo.css">
+    <link rel="stylesheet" type="text/css" href="./css/specs.css">
     <style>
-        p {
-            margin-left: 100px;
-            margin-right: 100px;
-            margin-bottom: 40px;
+        p#descricao {
+            max-width: 700px;
+            font-size: .8rem;
+            width: 90%;
+            margin: 0 auto 50px;
             text-indent: 0px;
             text-align: center;
+            hyphens: auto;
         }
     </style>
 </head>
-<script language="javascript" src="javascript/funcoes.js"></script>
+<script language="javascript" src="./javascript/funcoes.js"></script>
+
 <body>
-<!--section, aside, footer-->
-<div id="interface">
+    <!--section, aside, footer-->
     <header id="cabecalho">
-    <hgroup>
-        <h1>Google Glass</h1>
-        <h2>A revolução do Google está chegando</h2>
-    </hgroup>
 
-    <img id="icone" src="imagens/especificacoes.png" alt="oclinhos">
- 
-<nav id="menu">
-    <h1>Menu Principal</h1>
-    <ul type="square" start="1">
-        <li onmouseover="mudaFoto('imagens/home.png')" onmouseout="mudaFoto('imagens/especificacoes.png')"><a href="index.html">Home</a></li>
-        <li onmouseover="mudaFoto('imagens/especificacoes.png')" onmouseout="mudaFoto('imagens/especificacoes.png')"><a href="specs.html">Especificações</a></li>
-        <li onmouseover="mudaFoto('imagens/fotos.png')" onmouseout="mudaFoto('imagens/especificacoes.png')"><a href="fotos.html">Fotos</a></li>
-        <li onmouseover="mudaFoto('imagens/multimidia.png')" onmouseout="mudaFoto('imagens/especificacoes.png')"><a href="multimidia.html">Multimídia</a></li>
-        <li onmouseover="mudaFoto('imagens/contato.png')" onmouseout="mudaFoto('imagens/especificacoes.png')"><a href="fale-conosco.html">Fale conosco</a></li>
-    </ul>
-</nav>
-</header>
+        <hgroup>
+            <h1>Google Glass</h1>
+            <h2>A revolução do Google está chegando</h2>
+        </hgroup>
 
-<section id="corpo-full">
-    <article id="principal">
-        <header id="artigo">
-            <hgroup>
-                <h3>Glass > Especificações</h3>
-                <h1>Raio-X no Google Glass</h1>
-                <h2>por Caicosa</h2>
-                <h3 class="dir">Atualizado em 23/Março/2021</h3>
-            </hgroup>
-        </header>
-    
-        <p>Clique em qualquer área destacada da imagem para ter mais informações sobre os recursos do Google Glass. Qualquer ponto vermelho vai te levar a um lugar cheio de novas informações.</p>
+        <img src="imagens/glass-logo-peq.jpg" alt="Google Glass logo">
 
-        <section id="conteudo">
-            <img src="imagens/glass-esquema-marcado.jpg" usemap="#meumapa">
-            <!--shape=rectangle, circle, poly-->
-            <map name="meumapa">
-                <area shape="rect" coords="184,208,268,258" href="google-glass.html#tela" target="janela">
-                <area shape="circle" coords="158,244,11" href="google-glass.html#camera" target="janela">
-                <area shape="poly" coords="27,144,82,215,83,252,26,169" href="google-glass.html#sensores" target="janela">
-                <area shape="circle" coords="77,51,11" href="google-glass.html#gadgets" target="janela">
-            </map>
-            <iframe src="google-glass.html" name="janela" id="frame-espec"></iframe>
+        <nav id="menu">
+            <h1>Menu Principal</h1>
+            <ul type="square" start="1">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./specs.html">Especificações</a></li>
+                <li><a href="./fotos.html">Fotos</a></li>
+                <li><a href="./fale-conosco.html">Fale conosco</a></li>
+            </ul>
+        </nav>
+        
+    </header>
+
+    <main id="main">
+        <section id="corpo-full">
+            <article id="principal">
+                <header id="artigo">
+                    <hgroup>
+                        <h3>Glass > Especificações</h3>
+                        <h1>Raio-X no Google Glass</h1>
+                        <h2>por Caicosa</h2>
+                        <h3 class="dir">Atualizado em 23/Março/2021</h3>
+                    </hgroup>
+                </header>
+                <p id="descricao">Clique em qualquer área destacada da imagem para ter mais informações sobre os recursos do Google
+                    Glass. Qualquer ponto vermelho vai te levar a um lugar cheio de novas informações.</p>
+                <section id="conteudo">
+                    <img src="./imagens/glass-esquema-marcado.jpg" usemap="#meumapa">
+                    <!--shape=rectangle, circle, poly-->
+                    <map name="meumapa">
+                        <area shape="rect" coords="184,208,268,258" href="google-glass.html#tela" target="janela">
+                        <area shape="circle" coords="158,244,11" href="google-glass.html#camera" target="janela">
+                        <area shape="poly" coords="27,144,82,215,83,252,26,169" href="google-glass.html#sensores" target="janela">
+                        <area shape="circle" coords="77,51,11" href="google-glass.html#gadgets" target="janela">
+                    </map>
+                    <iframe src="./google-glass.html" name="janela" id="frame-espec"></iframe>
+                </section>
+            </article>
         </section>
-    </article>
-</section>
+    </main>
 
-<footer id="rodape">
-    <p>Copyright &copy; 2021 - by Caicosa BR<br>
-    <a href="https://www.youtube.com/watch?v=_FX6rml2Yjs&ab_channel=MrBeast" target="_blank">Facebook</a> | 
-    <a href="https://www.youtube.com/watch?v=BXLVYzqlj2E&ab_channel=Kwebbelkop" target="_blank">Twitter</a><p>
+    <footer id="rodape">
+        <p>
+            <span>Copyright &copy; 2021 - by Caicosa BR</span>
+            <br>
+            <a href="https://www.youtube.com/watch?v=_FX6rml2Yjs&ab_channel=MrBeast"
+                target="_blank">Facebook</a>
+            <span>|</span>
+            <a href="https://www.youtube.com/watch?v=BXLVYzqlj2E&ab_channel=Kwebbelkop"
+                target="_blank">Twitter</a>
+        <p>
     </footer>
-</div>
 </body>
+
 </html>

@@ -6,12 +6,12 @@
         body {
             font-family: Arial;
             font-size: 10pt;
-            max-width: 390px;
             overflow: hidden;
         }
         p {
             text-align: justify;
             text-indent: 20px;
+            hyphens: auto;
         }
         article h1{
             font-size: 15pt;
@@ -21,9 +21,14 @@
             margin: 0px;
         }
         article h2 {
-            font-size: 13pt;
+            font-size: 1.5rem;
             color: #888888;
-            margin: 0px;
+            margin: 10px 0;
+        }
+        article#topo h2 {
+            margin-top: 150px;
+            text-align: center;
+            font-size: 2rem;
         }
         article {
             margin-bottom: 800px;
@@ -31,10 +36,14 @@
         img.img_dir {
             display: block;
             float: right;
-            margin-left: 5px;
+            margin-left: 15px;
         }
-        
-
+        img.img_dir + p {
+            font-size: 20px;
+        }
+        img:not(.img_dir) {
+            width: 100%;
+        }
     </style>
 </head>
 
@@ -43,7 +52,6 @@
     <header>
         <h2>Clique sobre as áreas destacadas em vermelho</h2>
     </header>
-    <img src="imagens/mao.png" alt="Mão apontando pra lá">
 </article>
 <article id="tela">
     <header>
@@ -75,7 +83,7 @@
         <h2>Quais são os dispositivos que complementam o Glass</h2>
     </header>
     <img src="imagens/det-bateria.jpg" alt="Bateria Google Glass" class="img_dir">
-    <p>Segundo a própria Google, o Glass virá com uma bateria que tem autonomia suficiente para durar um dia inteiro. Apenas algumas atividades como videoconferências e longas filmagens vão exigir um pouco mais. Além disso ele vem com WiFi, Bluetooth, 3G/4G e muito mais.</p>
+    <p>Segundo a própria Google, o Glass virá com uma bateria que tem autonomia suficiente para durar um dia inteiro. Apenas algumas atividades como videoconferências e longas filmagens vão exigir um pouco mais. Além disso ele vem com <em>WiFi</em>, <em>Bluetooth</em>, <em>3G/4G</em> e muito mais.</p>
 </article>
 </body>
 </html>
